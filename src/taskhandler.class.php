@@ -74,7 +74,7 @@ class Taskhandler{
     }
     else
     {
-      echo "OBS! Something Went wrong Please contact authorized personnel!<br>"
+      echo "OBS! Something Went wrong Please contact authorized personnel!<br>";
     }
   }
 
