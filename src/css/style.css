@@ -32,9 +32,9 @@ h1 {
   justify-content: center;
   margin-top: 0.5em;
   margin-bottom: 2em;
-  background-color: crimson;
+  background-color: rgb(20, 180, 220);
   padding: 0.5em;
-  font-size: 4.5em;
+  font-size: 2.5em;
 }
 
 .input-form {
