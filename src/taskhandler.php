@@ -19,16 +19,48 @@ catch(PDOException $e){
 
 
 //add task
-if(isset($_POST['submit'])){
+if(isset($_POST['add'])){
   if (empty($_POST['task'])) {
     $err_msg = "Please fill in the task you want to track!";
   }
   else{
     $task = $_POST['task'];
-    $sql = "INSERT INTO task (todos) VALUES (?)";
+    $desc = $_POST['description'];
+    $sql = "INSERT INTO task (todos, description ) VALUES (?,?)";
     $stmt = $conn->prepare($sql);
-    $stmt->execute([$task]);
+    $stmt->execute([$task , $desc]);
     header('location: index.php');
   }
 }
-?>
+
+
+
+
+// Delete task
+if (isset($_GET['delete'])) {
+  $id = $_GET['delete'];
+  $stmt = $conn->prepare('DELETE FROM task WHERE id = :id');
+  $stmt->bindValue('id', $id);
+  $stmt->execute();
+
+  header("Location: ./index.php");    
+}
+
+
+//Edit task
+if (isset($_POST['edit'])){
+  $updateTodo = $_POST['todos'];
+  $updateDesc = $_POST['description'];
+  $id = $_GET['edit'];
+  $stmt = $conn->prepare('UPDATE task SET todos = :todos, description = :description WHERE id = :id');
+  $stmt->bindParam(':id', $id);
+  $stmt->bindParam(':todos', $updateTodo);
+  $stmt->bindParam(':description', $updateDesc);
+  $stmt->execute();
+  if(headers_sent()){
+    die("Redirection Failed!");
+  }
+  else{
+    exit(header("Location:./index.php"));
+  }
+}
