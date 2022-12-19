@@ -18,7 +18,7 @@ services:
     # Username: root
     # Password: example
     ports:
-      - 3307:3306
+      - 3306:3306
     environment:
       MYSQL_ROOT_PASSWORD: example
     volumes:
