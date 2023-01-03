@@ -19,9 +19,5 @@ CREATE TABLE `task` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
-INSERT INTO `users` (`name`, `fav_color`) VALUES
-('Lucy',	'Yellow'),
-('Nick',	'Red'),
-('Mark',	'Blue');
 
 -- 2022-11-13 22:11:35
