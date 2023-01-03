@@ -7,14 +7,16 @@ SET sql_mode = 'NO_AUTO_VALUE_ON_ZERO';
 
 SET NAMES utf8mb4;
 
-DROP DATABASE IF EXISTS `company`;
-CREATE DATABASE `company` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
-USE `company`;
+DROP DATABASE IF EXISTS `todo`;
+CREATE DATABASE `todo` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+USE `todo`;
 
-DROP TABLE IF EXISTS `users`;
-CREATE TABLE `users` (
-  `name` text NOT NULL,
-  `fav_color` text NOT NULL
+DROP TABLE IF EXISTS `task`;
+CREATE TABLE `task` (
+  `id` int nNOT NULL AUTO_INCREMENT,
+  `todos` varchar(255) NOT NULL,
+  `description` TEXT NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 INSERT INTO `users` (`name`, `fav_color`) VALUES
