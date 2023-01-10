@@ -2,17 +2,37 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  width: 100%;
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px #36279700; 
+    border-radius: 5px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #352797; 
+    border-radius: 5px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #0b181d; 
+  }
 }
 body {
   background-color: #8b8a8a;
+  background-image: url('./images/circle.svg');
+  background-size: cover;
   height: 100%;
   min-height: 100vh;
+  
 }
 
 .container {
   font-size: 16px;
-  background-color: #ffffff;
+  background-color: #1f1c42;
   width: 90vw;
   max-width: 90em;
   position: absolute;
@@ -25,40 +45,154 @@ body {
 }
 
 h1{
+  width: 100%;
   position: absolute;
   top: 0;
   display: flex;
   justify-content: center;
   margin-top: 0.5em;
   margin-bottom: 2em;
-  background-color: rgb(20, 180, 220);
+  background-color: #2f23a6;
   padding: .5em;
   font-size: 2.5em;
 }
 
-.input-form{
+form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+}
+/* .input-form{
+ 
   display: flex;
   justify-content: center;
   margin: 2em 0px;
   flex-direction: column;
   padding: 2em;
-}
+} */
 
 .todos{
+
   outline: none;
   border-radius: 1em;
   border: none;
   box-shadow: -1px 1px 5px 1px black;
   margin-bottom: 2em;
   padding: 0.5em;
+  width: 75%;
 }
 
 .add-btn{
-  border-radius: 2em;
-  padding: 10px;
-  width: 50%;
   display: flex;
-  align-self: center;
   justify-content: center;
-  font-size: 2em;
+  align-items: center;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 1.5em;
+  padding: 0.2em ;
+  color: white;
+  background: #ad5389;
+  background: linear-gradient(0deg, rgba(20,167,62,1) 0%, rgba(102,247,113,1) 100%);
+  border: none;
+  box-shadow: 0 0.7em 1.5em -0.5em #14a73e98;
+  letter-spacing: 0.05em;
+  border-radius: 20em;
+  width: 100%;
 }
+
+ 
+.add-btn:hover {
+  box-shadow: 0 0.5em 1.5em -0.5em #14a73e98;
+ }
+ 
+.add-btn:active {
+  box-shadow: 0 0.3em 1em -0.5em #14a73e98;
+ }
+
+ form > p {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  color: white;
+  animation: fadeIn .5s;
+ }
+
+ .todo-card{
+  margin-top: 1em;
+  border-radius: 30px;
+  background: #e0e0e0;
+  box-shadow: 0px 1px 7px #bebebe, 0px -2px 0px #ffffff;
+  display: flex;
+  justify-content: space-evenly;
+  text-overflow: ellipsis;
+}
+
+ .todo-card >.task{
+  width: 25%;
+  overflow-x: scroll;
+  
+ }
+ .todo-card >.title{
+  width: 25%;
+  overflow-x: scroll;
+ }
+ .todo-card > a > .icons{
+  
+ }
+ 
+ .edit-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-image: linear-gradient(to top, #352797 0%, #0b181d 100%);
+  border: solid 3px transparent;
+  background-clip: padding-box;
+  box-shadow: 0px 0px 0px 3px #ffffff00;
+  color: white;
+  min-height: 43px;
+  padding: 0 13px 0 13px;
+  border-radius: 50px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: all .5s ease;
+}
+
+.edit-btn:active {
+  transform: scale(.5);
+  transition: all 100ms ease;
+}
+
+.edit-btn:hover {
+  box-shadow: 0px 0px 0px 1px #352797;
+}
+
+.edit-btn svg {
+  width: 16px;
+}
+
+.del-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  border: 0px solid transparent;
+  background-color: #352797;
+  border-radius: 1.25em;
+  transition: all 0.2s linear;
+ }
+
+ .del-btn:hover {
+  box-shadow: 3.4px 2.5px 4.9px #ffffff,
+   8.6px 6.3px 12.4px rgba(0, 0, 0, 0.035),
+   17.5px 12.8px 25.3px rgba(0, 0, 0, 0.045),
+   36.1px 26.3px 52.2px rgba(0, 0, 0, 0.055),
+   99px 72px 143px rgba(0, 0, 0, 0.08);
+ }
+
+
+ 
