@@ -1,9 +1,8 @@
 * {
+  font-family: "poppins";
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  /* Handle */
-  /* Handle on hover */
 }
 * ::-webkit-scrollbar {
   width: 10px;
@@ -64,6 +63,40 @@ form {
   flex-wrap: wrap;
 }
 
+form > p {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  color: white;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-name: warningMessage;
+          animation-name: warningMessage;
+  -webkit-animation-timing-function: cubic-bezier(0.71, 0.55, 0.62, 1.57);
+          animation-timing-function: cubic-bezier(0.71, 0.55, 0.62, 1.57);
+}
+
+@-webkit-keyframes warningMessage {
+  from {
+    opacity: 0;
+    transform: scale(0.9, 0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes warningMessage {
+  from {
+    opacity: 0;
+    transform: scale(0.9, 0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1, 1);
+  }
+}
 /* .input-form{
 
   display: flex;
@@ -97,7 +130,7 @@ form {
   box-shadow: 0 0.7em 1.5em -0.5em rgba(20, 167, 62, 0.5960784314);
   letter-spacing: 0.05em;
   border-radius: 20em;
-  width: 100%;
+  width: 75%;
 }
 
 .add-btn:hover {
@@ -108,13 +141,9 @@ form {
   box-shadow: 0 0.3em 1em -0.5em rgba(20, 167, 62, 0.5960784314);
 }
 
-form > p {
-  margin-bottom: 10px;
+.todo-container {
   display: flex;
   justify-content: center;
-  color: white;
-  -webkit-animation: fadeIn 0.5s;
-          animation: fadeIn 0.5s;
 }
 
 .todo-card {
@@ -124,7 +153,8 @@ form > p {
   box-shadow: 0px 1px 7px #bebebe, 0px -2px 0px #ffffff;
   display: flex;
   justify-content: space-evenly;
-  text-overflow: ellipsis;
+  align-items: center;
+  width: 75%;
 }
 
 .todo-card > .task {
@@ -175,11 +205,11 @@ form > p {
   align-items: center;
   padding: 1em;
   border: 0px solid transparent;
-  background-color: #352797;
+  background-color: #c51d1d;
   border-radius: 1.25em;
   transition: all 0.2s linear;
 }
 
 .del-btn:hover {
-  box-shadow: 3.4px 2.5px 4.9px #ffffff, 8.6px 6.3px 12.4px rgba(0, 0, 0, 0.035), 17.5px 12.8px 25.3px rgba(0, 0, 0, 0.045), 36.1px 26.3px 52.2px rgba(0, 0, 0, 0.055), 99px 72px 143px rgba(0, 0, 0, 0.08);
+  box-shadow: 3.4px 2.5px 4.9px #0a0a0a, 8.6px 6.3px 12.4px rgba(0, 0, 0, 0.035), 17.5px 12.8px 25.3px rgba(0, 0, 0, 0.045), 36.1px 26.3px 52.2px rgba(0, 0, 0, 0.055), 99px 72px 143px rgba(0, 0, 0, 0.08);
 }/*# sourceMappingURL=style.css.map */
