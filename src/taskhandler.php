@@ -61,3 +61,19 @@ if (isset($_POST['update'])) {
     exit(header("Location: ./index.php"));
   }
 }
+?>
+<?php
+
+// check if done
+if (isset($_GET['isDone'])) {
+  $id = $_GET['isDone'];
+  $stmt = $conn->prepare('UPDATE task SET isDone = true WHERE id = :id');
+  $stmt->bindValue(':id', $id);
+  $stmt->execute();
+
+  if (headers_sent()) {
+    die("Failed to redirect.");
+  } else {
+    exit(header("Location: ./idk.php"));
+  }
+}
