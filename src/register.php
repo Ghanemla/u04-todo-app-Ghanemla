@@ -32,16 +32,6 @@ if (isset($_POST['register'])) {
   $stmt->bindValue(':password', $password_hash);
   $stmt->execute();
   header('location: ./index.php');
-
-  // if (empty($username) || empty($password)) {
-  // echo '<div > </div> ';
-  // echo '<h2">Please enter a valid username and password.</h2>';
-  // echo '<h3>Please Register a user to continue.</h3>';
-  // echo '<a href="register.php"><button type="submit" value="Register" name="register" class="btn">register</button></a>';
-  // echo '</div>';
-  //   echo "<h1 class='bg-red-500 text-white'>title</h1>";
-  //   exit;
-  // }
 }
 
 
@@ -62,15 +52,5 @@ if (isset($_POST['register'])) {
   </div>
 </div>
 
-<!-- <form action="" method="post">
-  <label for="username">Username:</label>
-  <input type="text" id="username" name="username">
-  <label for="password">Password:</label>
-  <input type="password" id="password" name="password">
-  <input type="submit" value="Register" name="register">
-</form>
 
-
-<a href="login.php"><button type="submit" name="add" value="1" id="add-btn" class="add-btn"> login</button></a>
-<a href="index.php"><button type="submit" name="add" value="1" id="add-btn" class="add-btn"> Start</button></a> -->
 <?php ob_end_flush();

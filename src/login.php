@@ -9,7 +9,6 @@ if (isset($_POST['login'])) {
   $password = $_POST['password'];
   $stmt = $conn->prepare("SELECT * FROM users WHERE username = :username ");
   $stmt->bindValue(':username', $username);
-  // $stmt->bindValue(':password', $password);
   $stmt->execute();
   $username = $stmt->fetch(PDO::FETCH_ASSOC);
 
@@ -22,7 +21,7 @@ if (isset($_POST['login'])) {
     exit;
   } else {
     // Invalid password
-    // echo 'Invalid username or password';
+
     echo '<div class="class="flex h-[calc(100vh-80px)] items-center justify-center p-5  w-full ">
     <div class="text-center">
     <div class="inline-flex rounded-full bg-yellow-100 p-4 mt-5">
@@ -40,17 +39,6 @@ if (isset($_POST['login'])) {
   </div>';
     exit;
   }
-
-  // if ($username) {
-  //   session_start();
-  //   $_SESSION['user_id'] = $username['id'];
-
-  //   header('Location: todo.php');
-
-  //   exit;
-  // } else {
-  //   echo 'Invalid username or password';
-  // }
 }
 
 
@@ -78,8 +66,6 @@ if (isset($_POST['login'])) {
 
 
 
-<!-- <a href="login.php"><button type="submit" name="add" value="1" id="add-btn" class="bg-sky-600  hover:bg-sky-700 p-2 rounded-md text-white  capitalize  mt-5"> login</button></a>
-<a href="index.php"><button type="submit" name="add" value="1" id="add-btn" class="bg-sky-600  hover:bg-sky-700 p-2 rounded-md text-white  capitalize  ml-5"> Start</button></a> -->
 
 
 

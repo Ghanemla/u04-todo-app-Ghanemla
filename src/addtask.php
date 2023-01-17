@@ -35,10 +35,6 @@ if (isset($_POST['add'])) {
 
 
 
-<!-- <form action=" addtask.php" method="post">
-  <input type="text" name="task" class="todos" placeholder="Add Task">
-  <input type="text" name="description" class="todos" placeholder="Enter your task description">
-  <button type="submit" name="add" value="1"> Add Task &plus; </button>
-</form> -->
+
 
 <?php ob_end_flush();

@@ -44,23 +44,7 @@ if (isset($_POST['update'])) {
 }
 ?>
 
-<!-- <div class="flex mx-auto  items-center justify-center shadow-lg mt-56 mx-8 mb-4 max-w-lg">
 
-  <form action="" method="post" class="w-full max-w-xl bg-white rounded-lg px-4 pt-2">
-    <h1 class="font-medium leading-tight text-3xl capitalize  mb-5">Edit To-Do</h1>
-    <label for="task" class="font-semibold">Task:</label>
-    <input class="bg-gray-100 rounded border border-gray-400 leading-normal resize-none w-full h-20 py-2 px-3 font-medium placeholder-gray-700 focus:outline-none focus:bg-white" type="text" id="task" name="task" value="<?php echo $item['task']; ?>">
-    <br>
-    <label for="description" class="font-semibold">Description:</label>
-    <textarea id="description" name="description" class="bg-gray-100 rounded border border-gray-400 leading-normal resize-none w-full h-20 py-2 px-3 font-medium placeholder-gray-700 focus:outline-none focus:bg-white"><?php echo $item['description']; ?></textarea>
-
-    <label for="is_done" class="font-semibold">Is done:</label>
-    <input class="appearance-none w-9 focus:outline-none checked:bg-sky-600 h-5 bg-gray-400 rounded-full before:inline-block before:rounded-full before:bg-sky-700 before:h-4 before:w-4 checked:before:translate-x-full shadow-inner transition-all duration-300 before:ml-0.5" type="checkbox" id="is_done" name="is_done" <?php echo $item['is_done'] ? "checked" : ""; ?>>
-
-    <input type="submit" name="update" value="Update" class=" mt-5 ml-64 bg-white text-gray-700 font-medium py-1 px-4 border border-gray-400 rounded-lg tracking-wide mr-1 hover:bg-gray-100">
-  </form>
-</div>
-</div> -->
 
 <div class="container mx-auto p-4 ">
   <div class="w-full md:w-1/2 lg:w-1/3 mx-auto my-12 ">
