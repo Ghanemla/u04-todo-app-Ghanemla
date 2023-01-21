@@ -13,11 +13,11 @@ if (!isset($_SESSION['user_id'])) {
 // Get the to-do item information
 if (isset($_GET['id'])) {
   $id = $_GET['id'];
-  // $user_id = $_SESSION['user_id'];
+
   $stmt = $conn->prepare("DELETE FROM todo_items WHERE id = :id AND user_id = :user_id");
   $stmt->bindValue(':id', $id);
   $stmt->bindValue(':user_id', $_SESSION['user_id']);
   $stmt->execute();
-  // echo "cum";
+
   header('Location: todo.php');
 }

@@ -9,7 +9,7 @@ if (!isset($_SESSION['user_id'])) {
   exit;
 }
 
-//SELECT * FROM todo_items WHERE user_id = :user_id AND is_done = 0 "ORDER BY id DESC 
+
 $stmt = $conn->prepare("SELECT * FROM todo_items WHERE user_id = :user_id AND is_done = 0 ");
 $stmt->bindValue(':user_id', $_SESSION['user_id']);
 $stmt->execute();
@@ -21,8 +21,8 @@ $tasks = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 
 <div class="container mx-auto mt-20 rounded-lg  bg-[#374151]	max-w-fit p-10	">
-  <h1 class="font-medium leading-tight text-3xl uppercase text-white">Welcome !</h1>
-  <p class="grid-cols-3  text-lg mb-5 text-white">Here you can register personal tasks</p>
+  <h1 class="font-medium leading-tight text-3xl uppercase text-white">Welcome procrastinator!</h1>
+  <p class="grid-cols-3  text-lg mb-5 text-white">Here you can register personal tasks </p>
   <a type=" button" href="logout.php"><button type="button" class="bg-sky-700  hover:bg-red-700 p-2 rounded-md text-white mb-5 mr-5 capitalize ">Logout</button></a>
 
   <a href="donetasks.php"><button class="bg-sky-700 hover:bg-white hover:text-black	 p-2 rounded-md text-white mb-5 capitalize ">done tasks</button></a>
